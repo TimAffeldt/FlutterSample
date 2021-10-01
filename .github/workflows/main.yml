@@ -31,7 +31,7 @@ jobs:
       - run: flutter pub get
       - run: flutter test
       - run: flutter build web --release
-      
+      - run: mkdir ../docs
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
@@ -39,5 +39,5 @@ jobs:
           committer_email: actions@github.com
           branch: gh-pages
           message: 'GitHub Actions build site'
-          add: '*/build/web/* --force'
+          add: '*/docs/* --force'
       
