@@ -27,6 +27,7 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
            flutter-version: '2.0.5'
+      - run: cd flutter_sample
       - run: flutter pub get
       - run: flutter test
       - run: flutter build web --release
