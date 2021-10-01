@@ -11,6 +11,7 @@ class SampleItemDetailsView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Item Details'),
+         backgroundColor: const Color.fromARGB(255, 47,79,79),
       ),
       body: const Center(
         child: Text('More Information Here'),
