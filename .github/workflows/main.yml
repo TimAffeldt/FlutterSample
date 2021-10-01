@@ -24,16 +24,15 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    env:
-      working-directory: flutter_sample
+    defaults:
+      run:
+        shell: bash
+        working-directory: flutter_sample
     steps:      
       - uses: subosito/flutter-action@v1
         with:
            flutter-version: '2.5.1'        
       - run: flutter pub get
-        working-directory: ${{env.working-directory}}
       - run: flutter test
-        working-directory: ${{env.working-directory}}
       - run: flutter build web --release
-        working-directory: ${{env.working-directory}}
       
