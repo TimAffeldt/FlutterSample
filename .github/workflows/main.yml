@@ -40,5 +40,5 @@ jobs:
           committer_email: actions@github.com
           branch: gh-pages
           message: 'GitHub Actions build site'
-          add: '../docs/* --force'
+          add: 'docs/* --force'
       
