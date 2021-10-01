@@ -35,6 +35,7 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
+          working-directory: flutter_sample
           committer_name: GitHub Actions
           committer_email: actions@github.com
           branch: gh-pages
