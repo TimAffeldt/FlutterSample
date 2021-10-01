@@ -31,9 +31,9 @@ jobs:
         with:
            flutter-version: '2.5.1'        
       - run: flutter pub get
-        working-directory: ${{env.working-directory}}
+        working-directory: ./flutter_sample
       - run: flutter test
-        working-directory: ${{env.working-directory}}
+        working-directory: ./flutter_sample
       - run: flutter build web --release
-        working-directory: ${{env.working-directory}}
+        working-directory: ./flutter_sample
       
