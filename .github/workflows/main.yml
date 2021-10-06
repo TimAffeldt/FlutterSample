@@ -39,5 +39,5 @@ jobs:
           branch: gh-pages
           message: 'GitHub Actions build site'
           add: 'docs/* --force'
-          pull: --rebase
+          pull: --rebase --autostash
       
