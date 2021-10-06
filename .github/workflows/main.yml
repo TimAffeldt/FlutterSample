@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Build and Test
 
 # Controls when the workflow will run
 on:
@@ -28,16 +28,4 @@ jobs:
            flutter-version: '2.5.1'        
       - run: flutter pub get
       - run: flutter test
-      - run: flutter build web --release --base-href /FlutterSample/
-      - run: mkdir ../docs
-      - run: cp -a ../flutter_sample/build/web/. ../docs/
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v7
-        with:
-          committer_name: GitHub Actions
-          committer_email: actions@github.com
-          branch: gh-pages
-          message: 'GitHub Actions build site'
-          add: 'docs/* --force'
-          pull: --rebase --autostash master
       
